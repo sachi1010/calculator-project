@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #calculator{
+        width: 400px;
+        height: 600px;
+        border: 1px solid black;
+        background-color:black;
+        border-radius: 10px; 
+    }
+    input{
+        width: 70px;
+        height: 70px;
+        margin: 8px;
+        background-color: rgb(67, 134, 134);
+        font-size: 2em;
+        border-radius: 10px;
+        box-shadow: 3px 3px 3px gray;
+        margin-left: 15px;
+        border: 1px solid whitesmoke;
+    }
+    #result{
+        width: 380px;
+        margin: 5px;
+        font-size: 2em;
+        color: blue;
+        background-color: gray;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        background-color:bisque;
+    }
+    input:focus{
+        background-color: aquamarine;
+        color:blue;
+    }
+</style>
+<body>
+
+    <div id="calculator">
+        <input type="text" id="result">
+        <br><hr>
+        <input type="button" value="1" onclick="show('1')">
+        <input type="button" value="2" onclick="show('2')">
+        <input type="button" value="3" onclick="show('3')">
+        <input type="button" value="4" onclick="show('4')">
+        <br>
+        <input type="button" value="5" onclick="show('5')">
+        <input type="button" value="6" onclick="show('6')">
+        <input type="button" value="7" onclick="show('7')">
+        <input type="button" value="8" onclick="show('8')">
+        <br>
+        <input type="button" value="9" onclick="show('9')">
+        <input type="button" value="0" onclick="show('0')">
+        <input type="button" value="+" onclick="show('+')">
+        <input type="button" value="-" onclick="show('-')">
+        <br>
+        <input type="button" value="*" onclick="show('*')">
+        <input type="button" value="/" onclick="show('/')">
+        <input type="button" value="AC" onclick="clear1()">
+        <input type="button" value="=" onclick="result()">
+        <br>
+        <input type="button" value="Del" onclick="backspace()">
+        <input type="button" value="%" onclick="show('%')">
+        <input type="button" value="&" onclick="show('&')">
+        <input type="button" value="^" onclick="show('^')">
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
